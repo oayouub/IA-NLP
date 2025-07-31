@@ -70,7 +70,7 @@ model = TextRNN(vocab_size).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss()
 
-num_epochs = 5
+num_epochs = 1
 batch_size = 32
 
 for epoch in range(1, num_epochs + 1):
@@ -116,7 +116,6 @@ for epoch in range(1, num_epochs + 1):
     print(f" → Test accuracy: {test_accuracy:.4f}\n")
 
 def generate_text(model, char_to_idx, idx_to_char, start_text='h', max_length=100):
-    """Génère du texte à partir d'une phrase de départ"""
     model.eval()
     generated_text = start_text
     
