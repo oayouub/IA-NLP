@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de Texte</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    #output { 
+      background: #f5f5f5; 
+      padding: 15px; 
+      border-radius: 5px; 
+      margin: 10px 0; 
+      min-height: 100px;
+      white-space: pre-wrap;
+    }
+    .controls { margin: 20px 0; }
+    input, button { margin: 5px; padding: 8px; }
+    button { background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Générateur de Texte - Projet NLP</h1>
+    
+    <div class="controls">
+      <label>Phrase de départ: <input type="text" id="startPhrase" value="harry potter" size="20" placeholder="Entrez une phrase"></label>
+      <label>Longueur: <input type="number" id="maxLength" value="100" min="10" max="500"></label>
+      <button id="generate">Générer</button>
+      <button id="clear">Effacer</button>
+    </div>
+    
+    <div id="output">Cliquez sur "Générer" pour créer du texte...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
